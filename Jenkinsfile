@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-               sudo sh '/home/juppe_agon/maven3/bin/mvn clean install'
+                sh 'sudo /home/juppe_agon/maven3/bin/mvn clean install'
             }
         }
         stage('Test') { 
             steps {
-                sudo sh '/home/juppe_agon/maven3/bin/mvn test' 
+                sh 'sudo /home/juppe_agon/maven3/bin/mvn test' 
             }
         }
        
