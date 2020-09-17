@@ -1,11 +1,10 @@
+Jenkinsfile (Declarative Pipeline)
 pipeline {
     agent any
-
     stages {
-        stage('Build') {
+        stage('Example') {
             steps {
-                sh 'make' 
-                archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true 
+                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
             }
         }
     }
